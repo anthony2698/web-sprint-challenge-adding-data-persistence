@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-	if (req.body.name) {
+	if (req.body.resource_name) {
 		resources
 			.createResource(req.body)
 			.then((resource) => res.status(201).json(resource))
